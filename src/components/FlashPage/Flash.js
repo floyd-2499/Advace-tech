@@ -8,7 +8,7 @@ const Flash = () => {
     <div className="flash-page">
       <div className="container">
         <div className="left">
-          <i class="fab fa-studiovinari"></i>
+          <i className="fab fa-studiovinari"></i>
           <div className="text">
             <h1>Connecting</h1>
             <h1>People</h1>

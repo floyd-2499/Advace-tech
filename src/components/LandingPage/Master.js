@@ -1,16 +1,21 @@
 import React from "react";
+import "../../css/Master.css";
 
-const Master = () => {
+const Master = (Props) => {
+  const { WeatherData, currentTime } = Props;
+
   return (
     <div className="master-container">
       <div className="top">
         {/* few settings with Assistant */}
         <h1>Assistant</h1>
-
         <div className="d-t">
-          <p>Time:Time</p>
-          <p>day</p>
-          <p>day-month -year</p>
+          <p>{currentTime.time}</p>
+          <p>{currentTime.day}</p>
+          <p>{currentTime.date}</p>
+          <p>
+            {WeatherData.main.temp}° F, {WeatherData.weather[0].main}
+          </p>
         </div>
       </div>
 
@@ -18,7 +23,7 @@ const Master = () => {
 
       <div className="tasks">
         <div className="tasks-container">
-            {/* use grid */}
+          {/* use grid */}
           <div className="create-task"></div>
           <div className="Q-A"></div>
           <div className="Youtube"></div>

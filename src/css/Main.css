@@ -7,3 +7,29 @@
 *::-webkit-scrollbar {
   display: none;
 }
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.main .sidebar {
+  width: 22%;
+  height: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.main .master {
+  width: 88%;
+  height: 100%;
+}

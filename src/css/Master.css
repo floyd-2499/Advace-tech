@@ -1,0 +1,92 @@
+.master-container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(33.25%, #2176ff), color-stop(33.25%, #ffffff));
+  background: linear-gradient(180deg, #2176ff 33.25%, #ffffff 33.25%);
+}
+
+.master-container .top {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 20px 0px;
+  padding: 10px;
+}
+
+.master-container .top h1 {
+  width: 20%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0px;
+  color: #ffffff;
+  font-size: 50px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.master-container .top .d-t {
+  width: 30%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.master-container .top .d-t p {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.master-container .top .d-t p:nth-child(1) {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.master-container .top .d-t p:nth-child(2) {
+  font-weight: 200;
+}
+
+.master-container .top .d-t p:nth-child(3) {
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.master-container .top .d-t p:nth-child(4) {
+  font-size: 28px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
