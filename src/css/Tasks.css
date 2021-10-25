@@ -1,4 +1,4 @@
-.master-container {
+.tasks {
   width: 100%;
   height: 100vh;
   display: -webkit-box;
@@ -13,7 +13,7 @@
           flex-direction: column;
 }
 
-.master-container .text-speech {
+.tasks-inputs {
   padding: 20px;
   width: 80%;
   height: auto;
@@ -24,6 +24,9 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -35,16 +38,17 @@
   border: 2px solid rgba(87, 90, 137, 0.5);
 }
 
-.master-container .text-speech h1 {
+.tasks-inputs h1 {
+  margin: 0%;
   width: 100%;
   text-align: left;
   font-size: 32px;
   color: #31393c;
 }
 
-.master-container .text-speech input {
+.tasks-inputs input {
   width: 90%;
-  margin: 15px auto;
+  margin: 10px 0;
   padding: 7px 20px;
   background-color: #2176ff;
   color: #fff;
@@ -57,37 +61,30 @@
           box-shadow: 4px 4px 4px rgba(49, 57, 60, 0.25);
 }
 
-.master-container .text-speech input::-webkit-input-placeholder {
+.tasks-inputs input::-webkit-input-placeholder {
   color: #ffffff;
 }
 
-.master-container .text-speech input:-ms-input-placeholder {
+.tasks-inputs input:-ms-input-placeholder {
   color: #ffffff;
 }
 
-.master-container .text-speech input::-ms-input-placeholder {
+.tasks-inputs input::-ms-input-placeholder {
   color: #ffffff;
 }
 
-.master-container .text-speech input::placeholder {
+.tasks-inputs input::placeholder {
   color: #ffffff;
 }
 
-.master-container .text-speech span {
-  width: 90%;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.master-container .text-speech span button {
-  float: left;
-  padding: 7px 20px;
+.tasks-inputs button {
+  margin: 10px 0%;
+  padding: 10px 20px;
   background-color: #2176ff;
   color: #fff;
   font-size: 20px;
   border: none;
   outline: none;
-  margin-left: -20px;
   border-radius: 5px;
   cursor: pointer;
   -webkit-box-shadow: 4px 4px 4px rgba(49, 57, 60, 0.25);
@@ -96,18 +93,14 @@
   transition: all 0.5s ease-in-out;
 }
 
-.master-container .text-speech span button:hover {
+.tasks-inputs button:hover {
   -webkit-box-shadow: 0px 0px 0px rgba(49, 57, 60, 0.25), inset 4px 4px 4px rgba(49, 57, 60, 0.25);
           box-shadow: 0px 0px 0px rgba(49, 57, 60, 0.25), inset 4px 4px 4px rgba(49, 57, 60, 0.25);
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.master-container a {
-  text-decoration: none;
-}
-
-.master-container .tools {
+.tasks-contents {
   width: 83%;
   margin: auto;
   display: -webkit-box;
@@ -122,64 +115,107 @@
           flex-direction: row;
 }
 
-.master-container .tools-container {
-  width: 60%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-  grid-gap: 30px;
-  margin-top: 20px;
+.tasks-contents .lists {
+  width: 50%;
+  height: 400px;
+  overflow: scroll;
 }
 
-.master-container .tools-container .box {
+.tasks-contents .lists .box {
+  width: 90%;
+  height: 70px;
+  margin: 15px 0px;
+  background-color: #ffc016;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 5px;
+}
+
+.tasks-contents .lists .box h1 {
+  width: 90%;
+  margin: 0px;
+  color: #fff;
+  font-weight: 200;
+  text-indent: 30px;
+}
+
+.tasks-contents .lists .box span {
+  width: 10%;
+  margin: 0px;
+  font-size: 45px;
+  color: #fff;
+}
+
+.tasks-contents .tools-box {
+  height: 50%;
+  width: 50%;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tasks-contents .tools-box .icons {
+  width: 7%;
+  height: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #ffc016;
-  width: 250px;
-  height: 100px;
-  padding: 10px 0px;
-  border-radius: 7px;
-  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 0;
+}
+
+.tasks-contents .tools-box .icons i {
+  font-size: 36px;
+  color: #31393c;
   cursor: pointer;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 
-.master-container .tools-container .box:hover {
-  -webkit-box-shadow: 0px 0px 0px rgba(49, 57, 60, 0.25);
-          box-shadow: 0px 0px 0px rgba(49, 57, 60, 0.25);
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.tasks-contents .tools-box .icons i:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
-.master-container .tools-container .box h1 {
-  width: 100%;
-  color: #fff;
-  text-align: left;
-  text-indent: 20px;
-  font-size: 30px;
+.tasks-contents .gap {
+  width: 30%;
+  height: auto;
 }
 
-.master-container .tools-container .box p {
-  width: 90%;
-  text-align: right;
-  font-size: 60px;
-  color: #fff;
-  font-weight: 700;
-  margin-bottom: -10px;
+.tasks-contents .image {
+  float: right;
 }
 
-.master-container .tools img {
+.tasks-contents .image img {
   width: 300px;
   height: auto;
+  float: right;
 }

@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
 import WomanSitting from "./images/sit.png";
 import "../../css/Master.css";
 
 const Master = (Props) => {
-
-
   return (
     <div className="master-container" id="home">
       <div className="text-speech">
@@ -16,13 +14,15 @@ const Master = (Props) => {
         </span>
       </div>
 
-      <div className="tasks">
-        <div className="tasks-container">
+      <div className="tools">
+        <div className="tools-container">
           {/* use grid */}
-          <div className="box">
-            <h1>Create Task</h1>
-            <p>+</p>
-          </div>
+          <a href="#tasks">
+            <div className="box">
+              <h1>Create Task</h1>
+              <p>+</p>
+            </div>
+          </a>
           <div className="box">
             <h1>Edit Q & A</h1>
             <p>+</p>

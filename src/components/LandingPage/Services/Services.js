@@ -30,7 +30,7 @@ const Services = () => {
         </div>
         <div className="tools-box">
           <div className="icons">
-            <i class="fas fa-trash"></i>
+            <i className="fas fa-trash"></i>
             <i className="fas fa-info-circle"></i>
           </div>
           <div className="gap"></div>

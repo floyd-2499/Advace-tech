@@ -4,9 +4,12 @@ import SideBar from "./SideBar";
 import "../../css/Main.css";
 import Chats from "./Chat/Chat";
 import Services from "./Services/Services";
+import Contact from "./Contact/Contact";
+import Tasks from "./Tasks/Tasks";
 
 const Main = (Props) => {
   const { WeatherData } = Props;
+
   const [currentTime, setCurrentTime] = useState({
     time: "00:00:00 AM",
     day: "sunday",
@@ -80,9 +83,11 @@ const Main = (Props) => {
             <p>{currentTime.time}</p>
             <p>{currentTime.day}</p>
             <p>{currentTime.date}</p>
-            <p>
-              {WeatherData.main.temp}° F, {WeatherData.weather[0].main}
-            </p>
+            {WeatherData && (
+              <p>
+                {WeatherData.main.temp}° F, {WeatherData.weather[0].main}
+              </p>
+            )}
           </div>
         </div>
 
@@ -91,12 +96,14 @@ const Main = (Props) => {
 
         <Chats />
         <Services />
+        <Contact />
+        <Tasks/>
 
         {batteryLevel <= 25 ? (
           <div className="warning">
             <p>
               Battery !!! {batteryLevel}% is left....{" "}
-              <i class="fas fa-exclamation-triangle"></i>
+              <i className="fas fa-exclamation-triangle"></i>
             </p>
           </div>
         ) : (
