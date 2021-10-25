@@ -1,18 +1,20 @@
 import React from "react";
 import user from "./images/user.svg";
-import '../../css/Sidebar.css';
+import "../../css/Sidebar.css";
 
 const SideBar = (Props) => {
   const { WeatherData } = Props;
 
   return (
     <div className="sidebar-container">
-      <i className="fab fa-studiovinari"></i>
+      <a href="#top">
+        <i className="fab fa-studiovinari"></i>
+      </a>
 
       <div className="navs">
-        <a href="">Home</a>
-        <a href="">Chat</a>
-        <a href="">Services</a>
+        <a href="#home">Home</a>
+        <a href="#chats">Chat</a>
+        <a href="#service">Services</a>
         <a href="">Contact</a>
       </div>
 

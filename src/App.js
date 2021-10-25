@@ -3,11 +3,8 @@ import { BrowserRouter, Route } from "react-router-dom";
 // components
 import Flash from "./components/FlashPage/Flash";
 import LogoFlash from "./components/FlashPage/LogoFlash";
-// pages
+// pages - singlePage app
 import Home from "./components/LandingPage/Home";
-import Contact from "./components/Contact/Contact";
-import Chat from "./components/Chat/Chat";
-import Services from "./components/Services/Services";
 // CSS
 import "./css/Main.css";
 

@@ -1,39 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
+
+import WomanSitting from "./images/sit.png";
 import "../../css/Master.css";
 
 const Master = (Props) => {
-  const { WeatherData, currentTime } = Props;
+
 
   return (
-    <div className="master-container">
-      <div className="top">
-        {/* few settings with Assistant */}
-        <h1>Assistant</h1>
-        <div className="d-t">
-          <p>{currentTime.time}</p>
-          <p>{currentTime.day}</p>
-          <p>{currentTime.date}</p>
-          <p>
-            {WeatherData.main.temp}° F, {WeatherData.weather[0].main}
-          </p>
-        </div>
+    <div className="master-container" id="home">
+      <div className="text-speech">
+        <h1>Text to Speech</h1>
+        <input type="text" placeholder="Enter Text ....." />
+        <span>
+          <button>Submit</button>
+        </span>
       </div>
-
-      <div className="text-speech"></div>
 
       <div className="tasks">
         <div className="tasks-container">
           {/* use grid */}
-          <div className="create-task"></div>
-          <div className="Q-A"></div>
-          <div className="Youtube"></div>
+          <div className="box">
+            <h1>Create Task</h1>
+            <p>+</p>
+          </div>
+          <div className="box">
+            <h1>Edit Q & A</h1>
+            <p>+</p>
+          </div>
+          <div className="box">
+            <h1>YouTube</h1>
+            <p>+</p>
+          </div>
         </div>
 
-        <img src="" alt="girl-sitting" />
-      </div>
-
-      <div className="warning">
-        <h1>Battery Low !!! 27% is left....</h1>
+        <img src={WomanSitting} alt="Woman Sitting" />
       </div>
     </div>
   );

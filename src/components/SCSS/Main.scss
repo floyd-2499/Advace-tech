@@ -1,30 +1,109 @@
+@import "./Variables.scss";
+
 * {
   padding: 0px;
   max-width: 1550px;
-  margin: auto;
+  margin: 0 auto;
   &::-webkit-scrollbar {
     display: none;
   }
 }
 
-.main{
+.main {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   display: flex;
-  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  background: linear-gradient(180deg, #2176ff 36.25%, #ffffff 36.25%);
+  background-attachment: fixed;
 
-  .sidebar{
-    width: 22%;
+  .sidebar {
+    width: 20%;
     height: 100%;
-    position: sticky;
-    top: 0;
-    left: 0;
+    background-color: $dark;
   }
   .master {
-    width: 88%;
+    width: 90%;
     height: 100%;
+
+    .top {
+      height: fit-content;
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: row;
+      margin: 10px auto 0px auto;
+      padding: 10px 0px;
+
+      h1 {
+        width: 25%;
+        height: fit-content;
+        margin: 0px;
+        color: #ffffff;
+        font-size: 50px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        font-weight: 400;
+        text-indent: 20px;
+      }
+      .d-t {
+        width: 20%;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: fit-content;
+
+        p {
+          font-size: 18px;
+          color: $white;
+          margin-bottom: 5px;
+
+          &:nth-child(1) {
+            font-size: 32px;
+            font-weight: 500;
+          }
+          &:nth-child(2) {
+            font-weight: 200;
+          }
+          &:nth-child(3) {
+            font-size: 16px;
+            letter-spacing: 1px;
+            font-weight: 200;
+          }
+          &:nth-child(4) {
+            font-size: 28px;
+            letter-spacing: 1px;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+
+    .warning {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 350px;
+      height: fit-content;
+      padding: 10px 0px;
+      background-color: $dark;
+      border-radius: 25px 0px 0px 0px;
+
+      p {
+        width: 100%;
+        float: right;
+        text-align: center;
+        color: #ffffff;
+        font-weight: 100;
+        font-size: 22px;
+        i {
+          color: $yellow;
+          margin-left: 20px;
+        }
+      }
+    }
   }
-
-
 }
-

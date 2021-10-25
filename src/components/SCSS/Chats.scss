@@ -1,0 +1,175 @@
+@import "./Variables.scss";
+
+.chats {
+  width: 90%;
+  height: 100vh;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  .mobile {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+
+    &-container {
+      width: 325px;
+      height: 620px;
+      background: $white;
+      border: 10px solid rgba(87, 90, 137, 0.5);
+      box-sizing: border-box;
+      box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      padding: 30px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-direction: column;
+
+      .box {
+        height: auto;
+        width: 100%;
+
+        &-user {
+          width: 100%;
+          height: fit-content;
+          margin-bottom: 7px;
+          text-align: end;
+
+          p {
+            font-size: 14px;
+            color: $dark;
+            margin-bottom: 10px;
+          }
+          span {
+            color: $white;
+            background-color: $yellow;
+            width: fit-content;
+            padding: 10px 20px;
+            font-size: 20px;
+            border-radius: 10px;
+            transition: all 0.5s ease-in-out;
+            cursor: pointer;
+          }
+        }
+
+        &-bot {
+          width: 100%;
+          height: fit-content;
+          margin-bottom: 7px;
+
+          p {
+            font-size: 14px;
+            color: $dark;
+            margin-bottom: 10px;
+          }
+          span {
+            color: $white;
+            background-color: $grey;
+            width: fit-content;
+            padding: 10px 20px;
+            font-size: 20px;
+            border-radius: 10px;
+            transition: all 0.5s ease-in-out;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .tools {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .head {
+      width: 100%;
+      height: 20%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      flex-direction: row;
+
+      h1 {
+        font-size: 70px;
+        font-weight: 300;
+        color: $white;
+        width: 100%;
+        text-align: start;
+      }
+    }
+    &-box {
+      height: 50%;
+      width: 100%;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .icons {
+        width: 7%;
+        height: 170px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: 0;
+
+        i {
+          font-size: 30px;
+          color: $dark;
+          cursor: pointer;
+          transition: all 0.7s ease-in-out;
+
+          &:first-child:hover {
+            transform: rotate(360deg);
+          }
+
+          //   &:nth-child(2){
+          //     transition: all inherit ease-in-out;
+          //   }
+          &:nth-child(2):hover {
+            animation-duration: 0.4s;
+            animation-name: sweep;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+          @keyframes sweep {
+            from {
+              transform: rotate(-10deg);
+            }
+
+            to {
+              transform: rotate(10deg);
+            }
+          }
+          &:last-child:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+    .gap{
+        width: 40%;
+        height: auto;
+    }
+    .image {
+      float: right;
+
+      img {
+        width: 300px;
+        height: auto;
+        float: right;
+      }
+    }
+  }
+}
