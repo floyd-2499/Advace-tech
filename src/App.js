@@ -39,6 +39,7 @@ const App = () => {
     }
     function error() {
       error = "Unable to retrieve your location";
+      window.location.reload();
     }
   }
 
@@ -59,7 +60,7 @@ const App = () => {
         {loading ? (
           <Flash />
         ) : (
-          <div>{flashLogo ? <LogoFlash /> : <Home WeatherData={data}/>}</div>
+          <div>{flashLogo ? <LogoFlash /> : <Home WeatherData={data} />}</div>
         )}
       </BrowserRouter>
     </div>

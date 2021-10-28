@@ -6,6 +6,7 @@ import Chats from "./Chat/Chat";
 import Services from "./Services/Services";
 import Contact from "./Contact/Contact";
 import Tasks from "./Tasks/Tasks";
+import Youtube from "./Youtube/Youtube";
 
 const Main = (Props) => {
   const { WeatherData } = Props;
@@ -98,6 +99,7 @@ const Main = (Props) => {
         <Services />
         <Contact />
         <Tasks/>
+        <Youtube />
 
         {batteryLevel <= 25 ? (
           <div className="warning">

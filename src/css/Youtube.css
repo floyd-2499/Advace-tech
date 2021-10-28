@@ -1,4 +1,4 @@
-.chats {
+.youtube {
   width: 90%;
   height: 100vh;
   margin: 0px auto;
@@ -14,7 +14,7 @@
           flex-direction: row;
 }
 
-.chats .mobile {
+.youtube-container {
   width: 30%;
   height: 100%;
   display: -webkit-box;
@@ -33,102 +33,130 @@
   margin-bottom: 40px;
 }
 
-.chats .mobile-container {
-  width: 325px;
+.youtube-container .box {
+  width: 350px;
   height: 620px;
   background: #fff;
-  border: 10px solid rgba(87, 90, 137, 0.5);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border: 2px solid rgba(87, 90, 137, 0.5);
   -webkit-box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   padding: 30px 10px;
-  overflow-y: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -ms-flex-direction: column;
-      flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.chats .mobile-container::-webkit-scrollbar {
-  display: none;
+.youtube-container .box .main-video {
+  width: 100%;
+  height: 190px;
+  background-color: #31393c;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.chats .mobile-container .box {
+.youtube-container .box .list {
+  width: 100%;
+  height: 370px;
+  margin: 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: scroll;
+}
+
+.youtube-container .box .list .video {
+  width: 100%;
   height: auto;
+  margin: 15px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.youtube-container .box .list .video-box {
+  width: 60%;
+  height: 90px;
+  background-color: #31393c;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.youtube-container .box .list .video p {
+  font-size: 18px;
+}
+
+.youtube-container .box .search {
   width: 100%;
-}
-
-.chats .mobile-container .box-user {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin-bottom: 7px;
-  text-align: end;
-}
-
-.chats .mobile-container .box-user p {
-  font-size: 14px;
-  color: #31393c;
-  margin-bottom: 10px;
-}
-
-.chats .mobile-container .box-user span {
-  color: #fff;
-  background-color: #ffc016;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 10px 20px;
-  font-size: 20px;
+  padding: 10px 0px;
+  background-color: #2176ff;
   border-radius: 10px;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  font-size: 20px;
+  color: #fff;
   cursor: pointer;
 }
 
-.chats .mobile-container .box-bot {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin-bottom: 7px;
-}
-
-.chats .mobile-container .box-bot p {
-  font-size: 14px;
-  color: #31393c;
-  margin-bottom: 10px;
-}
-
-.chats .mobile-container .box-bot span {
-  color: #fff;
-  background-color: #575A89;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 10px 20px;
+.youtube-container .box .search input {
+  width: 90%;
+  background-color: #2176ff;
+  outline: none;
+  border: none;
   font-size: 20px;
-  border-radius: 10px;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  color: #fff;
+  text-indent: 20px;
   cursor: pointer;
 }
 
-.chats .tools {
+.youtube-container .box .search input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.youtube-container .box .search input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.youtube-container .box .search input::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.youtube-container .box .search input::placeholder {
+  color: #ffffff;
+}
+
+.youtube .tools {
   width: 50%;
   height: 100%;
   display: -webkit-box;
@@ -146,7 +174,7 @@
           flex-direction: column;
 }
 
-.chats .tools .head {
+.youtube .tools .head {
   width: 100%;
   height: 20%;
   display: -webkit-box;
@@ -164,7 +192,7 @@
           flex-direction: row;
 }
 
-.chats .tools .head h1 {
+.youtube .tools .head h1 {
   font-size: 70px;
   font-weight: 300;
   color: #fff;
@@ -172,7 +200,7 @@
   text-align: start;
 }
 
-.chats .tools-box {
+.youtube .tools-box {
   height: 50%;
   width: 100%;
   margin-top: 30px;
@@ -188,7 +216,7 @@
           justify-content: space-between;
 }
 
-.chats .tools-box .icons {
+.youtube .tools-box .icons {
   width: 7%;
   height: 170px;
   display: -webkit-box;
@@ -207,7 +235,7 @@
   margin: 0;
 }
 
-.chats .tools-box .icons i {
+.youtube .tools-box .icons i {
   font-size: 30px;
   color: #31393c;
   cursor: pointer;
@@ -215,12 +243,12 @@
   transition: all 0.7s ease-in-out;
 }
 
-.chats .tools-box .icons i:first-child:hover {
+.youtube .tools-box .icons i:first-child:hover {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
-.chats .tools-box .icons i:nth-child(2):hover {
+.youtube .tools-box .icons i:nth-child(2):hover {
   -webkit-animation-duration: 0.4s;
           animation-duration: 0.4s;
   -webkit-animation-name: sweep;
@@ -253,21 +281,21 @@
   }
 }
 
-.chats .tools-box .icons i:last-child:hover {
+.youtube .tools-box .icons i:last-child:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-.chats .tools .gap {
+.youtube .tools .gap {
   width: 40%;
   height: auto;
 }
 
-.chats .tools .image {
+.youtube .tools .image {
   float: right;
 }
 
-.chats .tools .image img {
+.youtube .tools .image img {
   width: 300px;
   height: auto;
   float: right;

@@ -23,14 +23,17 @@ const Master = (Props) => {
               <p>+</p>
             </div>
           </a>
+
           <div className="box">
             <h1>Edit Q & A</h1>
             <p>+</p>
           </div>
-          <div className="box">
-            <h1>YouTube</h1>
-            <p>+</p>
-          </div>
+          <a href="#youtube">
+            <div className="box">
+              <h1>YouTube</h1>
+              <p>+</p>
+            </div>
+          </a>
         </div>
 
         <img src={WomanSitting} alt="Woman Sitting" />
